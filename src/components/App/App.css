@@ -8,7 +8,8 @@
   background-color: white;
   color: #282c34;
   padding: 10px;
-
   height: calc(90vh - 40px);
   width: calc(100% - 20px);
+  max-height: fit-content;
+  overflow: scroll;
 }

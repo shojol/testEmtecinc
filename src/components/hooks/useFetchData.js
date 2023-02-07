@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const useFetchData = (
   url,
   options = {
     body: {},
     query: {},
-    method: 'GET',
+    method: "GET",
   }
 ) => {
   const [refetch, setRefetch] = React.useState(true);
@@ -22,13 +22,14 @@ const useFetchData = (
       fetch(url, {
         method: options.method,
         headers: options.headers || {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body:
-          options.method !== 'GET' ? JSON.stringify(options.body) : undefined,
+          options.method !== "GET" ? JSON.stringify(options.body) : undefined,
       })
         .then((response) => response.json())
         .then((data) => {
+          // console.log(data);
           setData({
             response: data,
             error: false,
@@ -38,7 +39,7 @@ const useFetchData = (
         .catch((error) => {
           //fetch throws an error only on network failure or if anything prevented the request from completing
           setData({
-            response: { status: 'network_failure', error },
+            response: { status: "network_failure", error },
             error: true,
             loading: false,
           });

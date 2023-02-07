@@ -1,29 +1,34 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PageTitle from "../../_shared/PageTitle/PageTitle";
 import { MoviesWrap, MoviesUl } from "../Pages.styles";
-import { MovieCartFront } from "../Components/MovieCartFront";
-import { MovieCartBack } from "../Components/MovieCartBack";
 import ReactHoverFlip from "react-hover-flip";
 import { MovieData } from "../Pages";
+import { MovieCartFront } from "../Components/MovieCartFront";
+import { MovieCartBack } from "../Components/MovieCartBack";
 
-const NowPlaying = () => {
-  const { movies, favMovies, setFavMovies } = useContext(MovieData);
+export const Favorites = () => {
+  const [myFavMov, setMyFavMov] = useState([]);
+  const { movies, favoriteMovies, setFavoriteMovies } = useContext(MovieData);
 
   const myFavorite = (id) => {
     let newId = id.toString();
-    if (favMovies.includes(newId)) {
-      setFavMovies((prev) => prev.filter((p) => p !== newId));
+    if (favoriteMovies.includes(newId)) {
+      setFavoriteMovies((prev) => prev.filter((p) => p !== newId));
     } else {
-      setFavMovies((prev) => [...prev, newId]);
+      setFavoriteMovies((prev) => [...prev, newId]);
     }
   };
 
+  useEffect(() => {
+    movies && setMyFavMov(movies.filter((m) => m.isFavorite));
+  }, [movies]);
+
   return (
     <React.Fragment>
-      <PageTitle>Now Playing</PageTitle>
+      <PageTitle>My Favorite</PageTitle>
       <MoviesWrap>
         <MoviesUl>
-          {movies.map(
+          {myFavMov.map(
             ({
               id,
               title,
@@ -67,5 +72,3 @@ const NowPlaying = () => {
     </React.Fragment>
   );
 };
-
-export default NowPlaying;

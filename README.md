@@ -19,7 +19,7 @@ For this challenge, you’ll build a small web application that fetches a list o
 
 ### Requirements
 
-> > > Note: The test is done for desktop and also responsive. If you want me to get done for mobile(as per wireFrame) and want me to add the optionals please let me know.
+## Note: The test is done for desktop and also responsive. please let me know, if you want for mobile(as per wireFrame) and the optionals.
 
 - An API for _The Movie Database_ is available and set to a list of “Now Playing” movies
   - Additional documentation can for endpoint can be found at: https://developers.themoviedb.org/3/movies/get-now-playing

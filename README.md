@@ -19,6 +19,8 @@ For this challenge, you’ll build a small web application that fetches a list o
 
 ### Requirements
 
+> > > Note: The test is done for desktop and also responsive. If you want me to get done for mobile(as per wireFrame) and want me to add the optionals please let me know.
+
 - An API for _The Movie Database_ is available and set to a list of “Now Playing” movies
   - Additional documentation can for endpoint can be found at: https://developers.themoviedb.org/3/movies/get-now-playing
 - Display the movies in the layout found in `/wireFrames` or seen below.
@@ -48,5 +50,5 @@ For this challenge, you’ll build a small web application that fetches a list o
 
 If you’re not able to finish in the designated time, just send us what you have. At the end of the day, quality > quantity, meaning: if the code is really good, and you're missing a small feature,that doesn’t mean you're disqualified.
 
-[mobilewireframe]: wireFrames/webChallengeMobile.jpeg 'Mobile Wire Frame'
-[nonmobilewireframe]: wireFrames/webChallengeNonMobile.jpeg 'Non-Mobile Wire Frame'
+[mobilewireframe]: wireFrames/webChallengeMobile.jpeg "Mobile Wire Frame"
+[nonmobilewireframe]: wireFrames/webChallengeNonMobile.jpeg "Non-Mobile Wire Frame"
